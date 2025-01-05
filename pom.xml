@@ -34,26 +34,59 @@
 		<spring-ai.version>1.0.0-M4</spring-ai.version>
 	</properties>
 	<dependencies>
+		<!-- Spring Boot Web Starter (handles HTTP requests, file uploads, etc.) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<!-- Ollama Spring Boot Starter (integrates Llama AI for vectorization) -->
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
 		</dependency>
 
+		<!-- Lombok (for reducing boilerplate code) -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- Spring Boot Starter Test (for testing) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+<!--		&lt;!&ndash; Spring Boot Starter Data JPA (for SQL database integration) &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash; JDBC Driver for your specific database (e.g., PostgreSQL, MySQL, etc.) &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.postgresql</groupId>-->
+<!--			<artifactId>postgresql</artifactId>-->
+<!--			<version>42.2.5</version>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash; Apache Tika for file content extraction &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.apache.tika</groupId>-->
+<!--			<artifactId>tika-core</artifactId>-->
+<!--			<version>1.24</version>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash; For handling Multipart File uploads &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-web</artifactId>-->
+<!--		</dependency>-->
 	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
