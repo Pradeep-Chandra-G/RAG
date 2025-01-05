@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Chat</title>
+</head>
+<body>
+<h1>Chat with <span th:text="${receiver}"></span></h1>
+
+<div th:each="message : ${messages}">
+  <div>
+    <strong th:text="${message.sender}"></strong>:
+    <span th:text="${message.content}"></span>
+  </div>
+</div>
+
+<form action="#" th:action="@{/sendMessage}" method="post">
+  <input type="hidden" name="sender" th:value="${sender}" />
+  <input type="hidden" name="receiver" th:value="${receiver}" />
+  <textarea name="content" placeholder="Type your message..."></textarea>
+  <button type="submit">Send</button>
+</form>
+</body>
+</html>
